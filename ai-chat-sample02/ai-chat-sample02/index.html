@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIチャット(チャット形式)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="chat-config-container">
+        <div class="chat-input">
+            <select id="llm-model-list">
+                <option value="gemma2:2b">Gemma2(gemma2:2b)</option>
+                <option value="gemma2">Gemma2(gemma2)</option>
+                <option value="gemma2:27b">Gemma2(gemma2:27b)</option>
+                <option value="lamma3.1">lamma3.1</option>
+                <option value="phi3:mini">phi3(phi3:mini)</option>
+                <option value="phi3:medium">phi3(phi3:medium)</option>
+                <option value="phi3:medium-128k">phi3(phi3:medium-128k)</option>
+                <option value="mistral">mistral</option>
+            </select>
+            <input type="text" id="ip-address-input" placeholder="IPアドレス（例:localhost、192.168.1.10など">
+            <button id="apply-button">設定</button>
+        </div>
+    </div>
+
+    <div class="chat-container">
+        <div class="chat-messages">
+            <!--
+            <div class="message received">
+                <div class="icon"></div>
+                <div class="message-text">こんにちは！</div>
+            </div>
+            <div class="message sent">
+                <div class="message-text">こんにちは！元気ですか？</div>
+            </div>
+            -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="message-input" placeholder="メッセージを入力">
+            <button id="send-button">送信</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
